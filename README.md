@@ -4,7 +4,6 @@
 ![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=flat&logo=vite&logoColor=white)
 ![React Router](https://img.shields.io/badge/React_Router-7-CA4245?style=flat&logo=reactrouter&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=flat&logo=fastapi&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat)
 
 A modern AI chat application built with React and powered by a FastAPI backend. Supports real-time streaming responses, persistent chat history, and markdown rendering.
 
