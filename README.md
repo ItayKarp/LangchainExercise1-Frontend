@@ -1,16 +1,72 @@
-# React + Vite
+# Karpov's Agent
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-19-61DAFB?style=flat&logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=flat&logo=vite&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-7-CA4245?style=flat&logo=reactrouter&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=flat&logo=fastapi&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat)
 
-Currently, two official plugins are available:
+A modern AI chat application built with React and powered by a FastAPI backend. Supports real-time streaming responses, persistent chat history, and markdown rendering.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Streaming AI responses** — tokens stream in real-time as the model generates them
+- **Thinking mode** — displays the model's reasoning process before the response
+- **Chat history** — persistent conversations stored server-side, browsable from the sidebar
+- **Markdown rendering** — AI responses render with full markdown support (bold, lists, code blocks)
+- **Authentication** — JWT-based login, registration, and password reset
+- **Auto-scroll** — chat window follows the latest message during streaming
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | React 19, Vite 8 |
+| Routing | React Router 7 |
+| Markdown | react-markdown |
+| Backend | FastAPI (Python) |
+| Auth | JWT |
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- Python 3.10+
+- Backend server running on `http://localhost:8000`
+
+### Frontend
+
+```bash
+npm install
+npm run dev
+```
+
+### Backend
+
+Refer to the backend repository for setup instructions.
+
+---
+
+## Project Structure
+
+```
+src/
+├── api/          # API calls (auth, chat)
+├── components/   # Chat, ChatList
+├── context/      # AuthContext
+├── hooks/        # useAuthFetch, useAutoScroll
+└── pages/        # Home, Login, Register, ForgotPassword
+```
+
+---
+
+## Environment
+
+The app expects the backend to be running at `http://localhost:8000`. Update the base URL in `src/api/` if your backend runs elsewhere.
